@@ -3,8 +3,9 @@
         *   [Loader] 
         *   [FavIcon]
         *   [Title]
-    *   [NavBar] 🔴
-        *   [Logo]
+    *   [NavBar] 🟡
+        *   [Logo] ✅
+        *   [colors] ✅
         *   [Links]
     *   [Home] 🔴
         *   [img1]
