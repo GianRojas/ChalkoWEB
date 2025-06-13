@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #65B530;
-    --secondary: #9B9B9B;
+    --primary: #a27865;
+    --secondary: #638075;
     --light: #F5F5F5;
     --dark: #161616;
 }
@@ -46,6 +46,7 @@
 .btn {
     font-weight: 500;
     transition: .5s;
+    color: #638075;
 }
 
 .btn.btn-primary {
@@ -90,7 +91,7 @@
 .navbar .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
-    color: var(--dark);
+    color: var(--secondary);
     font-weight: 500;
     outline: none;
 }
