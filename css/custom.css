@@ -1,4 +1,4 @@
-.background-image-about {
+.background-image-about-problem {
   background-image: url('img/about.jpg'); /* Note: The HTML uses different images, but the principle applies */
   background-size: cover;
   background-position: center;
@@ -7,7 +7,7 @@
   overflow: hidden; /* Hide overflow from pseudo-element edges */
 }
 
-.background-image-about::before {
+.background-image-about-problem::before {
   content: '';
   position: absolute;
   top: 0;
@@ -20,7 +20,7 @@
   z-index: 1; /* Ensure overlay is above background image */
 }
 
-.background-image-about:hover::before {
+.background-image-about-problem:hover::before {
   opacity: 1; /* Make overlay visible on hover */
 }
 
@@ -31,7 +31,7 @@
   transition: opacity 0.5s ease; /* Add transition for fade-in effect */
 }
 
-.background-image-about:hover .background-content {
+.background-image-about-problem:hover .background-content {
   opacity: 1; /* Make content visible on hover of parent */
   color: white;
 }
