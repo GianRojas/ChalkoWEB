@@ -14,7 +14,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.75); /* Black with 35% opacity */
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.6); /* Black with 75% opacity */
   opacity: 0; /* Start invisible */
   transition: opacity 0.5s ease; /* Smooth transition for opacity */
   z-index: 1; /* Ensure overlay is above background image */
