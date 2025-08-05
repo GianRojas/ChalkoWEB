@@ -25,7 +25,7 @@
   opacity: 1; /* Make overlay visible on hover */
 }
 
-.background-content {
+.background-content-problem {
   position: relative; /* Create a new stacking context */
   z-index: 2; /* Ensure content is above the overlay */
   opacity: 0; /* Start invisible */
