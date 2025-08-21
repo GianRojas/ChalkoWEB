@@ -1,38 +1,54 @@
 .background-image-about-problem {
-  background-image: url('img/about.jpg'); /* Note: The HTML uses different images, but the principle applies */
+  background-image: url('img/about.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; /* Needed for pseudo-element positioning */
-  overflow: hidden; /* Hide overflow from pseudo-element edges */
+  position: relative;
+  overflow: hidden;
 }
 
 .background-image-about-problem::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.6); /* Black with 75% opacity */
-  opacity: 0; /* Start invisible */
-  transition: opacity 0.5s ease; /* Smooth transition for opacity */
-  z-index: 1; /* Ensure overlay is above background image */
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
 }
 
 .background-image-about-problem:hover::before {
-  opacity: 1; /* Make overlay visible on hover */
+  opacity: 1;
 }
 
 .background-content-problem {
-  position: relative; /* Create a new stacking context */
-  z-index: 2; /* Ensure content is above the overlay */
-  opacity: 0; /* Start invisible */
-  transition: opacity 0.5s ease; /* Add transition for fade-in effect */
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .background-image-about-problem:hover .background-content {
-  opacity: 1; /* Make content visible on hover of parent */
+  opacity: 1;
   color: white;
+}
+
+/* Shadow only on the non-transparent pixels of the logo (text) */
+.header-carousel .d-flex img[alt="ChalkoTEX Logo"],
+.header-carousel .d-flex img.img-fluid {
+    position: relative !important;
+    z-index: 20 !important;
+    /* remove box-shadow if present */
+    padding-top: -3em;
+    box-shadow: none !important;
+
+    /* shadow follows shape (respects transparency) */
+    filter: drop-shadow(0 10px 18px rgba(85, 85, 85, 0.9)) !important;
+    -webkit-filter: drop-shadow(0 10px 18px rgba(82, 82, 82, 0.9  )) !important;
+}
+
+/* color override */
+.header-carousel p.fs-5 {
+  color: #e7e7e7 !important;
 }
