@@ -767,17 +767,18 @@
           <p>Recibe novedades y proyectos.</p>
           <form id="newsletter-form" class="newsletter-form" action="https://api.staticforms.xyz/submit" method="POST"
             novalidate>
-            <input type="hidden" name="apiKey" value="sf_20bfag47m2geng081454fg2g" />
-            <label for="newsletter-name" class="visually-hidden">Nombre</label>
+            <input type="hidden" name="accessKey" value="sf_20bfag47m2geng081454fg2g" />
+            <!-- Customize form behavior -->
+            <input type="hidden" name="subject" value="New Contact Form Submission">
+            <input type="hidden" name="replyTo" value="@email"> <!-- Use the email from the form -->
+            <input type="hidden" name="redirectTo" value="https://yourwebsite.com/thank-you">
             <input id="newsletter-name" name="name" type="text"
               class="form-control bg-transparent border-secondary w-100 py-3 ps-4 mb-2" placeholder="Tu nombre"
               required />
-
-            <label for="newsletter-email" class="visually-hidden">Correo electrónico</label>
             <input id="newsletter-email" name="email" type="email"
               class="form-control bg-transparent border-secondary w-100 py-3 ps-4 mb-2" placeholder="Tu correo"
               required />
-            
+
             <div class="position-relative w-100">
               <button data-sitekey="6Lc8UbYrAAAAALfronVPBc0soSjZUB52jBU1b8kU" data-callback='onSubmit'
                 data-action='submit' class="g-recaptcha btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
@@ -816,7 +817,7 @@
 
   <!-- Captcha -->
   <script>
-    function onSubmit(email) {
+    function onSubmit(token) {
       document.getElementById("newsletter-form").submit();
     }
   </script>
