@@ -3,9 +3,23 @@
     --primary: #a27865;
     --secondary: #638075;
     --light: #F5F5F5;
-    --dark: #161616;
+    --dark: #3C3C3B;
+}
+a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--primary);
+    text-decoration: none;
 }
 
+.text-primary {
+    color: var(--secondary) !important;
+}
+.bg-primary {
+    background-color: var(--secondary) !important;
+}
 .fw-medium {
     font-weight: 500 !important;
 }
