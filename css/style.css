@@ -17,6 +17,14 @@ a:hover {
 .text-primary {
     color: var(--secondary) !important;
 }
+.btn.btn-primary{
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+}
+.btn.btn-primary:hover{
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
 .bg-primary {
     background-color: var(--secondary) !important;
 }
