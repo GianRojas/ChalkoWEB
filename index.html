@@ -49,7 +49,7 @@
   </div>
   <!-- Spinner End -->
 
-  <!-- Topbar Start 
+  <!-- Topbar Start
     <div class="container-fluid bg-dark px-5">
         <div class="row gx-4 d-none d-lg-flex">
             <div class="col-lg-6 text-start">
@@ -539,7 +539,7 @@
   </div>
   <!-- Projects End -->
 
-  <!-- Quote Start 
+  <!-- Quote Start
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
         <div class="container quote px-lg-0">
             <div class="row g-0 mx-lg-0">
@@ -730,7 +730,7 @@
   <!-- Testimonial End -->
 
   <!-- Footer Start -->
-  <div class="container-fluid bg-dark text-secondary footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+  <div id="footer" class="container-fluid bg-dark text-secondary footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
       <div class="row g-5">
         <div class="col-lg-3 col-md-6">
@@ -772,9 +772,9 @@
             novalidate>
             <input type="hidden" name="accessKey" value="sf_20bfag47m2geng081454fg2g" />
             <!-- Customize form behavior -->
-            <input type="hidden" name="subject" value="New Contact Form Submission">
+            <input type="hidden" name="subject" value="Nuevo contacto desde ChalkoWEB MVP">
             <input type="hidden" name="replyTo" value="@email"> <!-- Use the email from the form -->
-            <input type="hidden" name="redirectTo" value="https://yourwebsite.com/thank-you">
+            <input type="hidden" name="redirectTo" value="https://gianrojas.github.io/ChalkoWEB/#footer">
 <div class="col-lg-12 col-md-6 row">
   <div class="col-lg-6">
     <input id="contacto-name" name="name" type="text"
@@ -789,14 +789,14 @@
       class="form-control bg-transparent border-secondary w-100 py-3 ps-4 mb-2" placeholder="Mensaje" required />
   </div>
   <div class="position-relative w-100 ">
-    <button data-sitekey="6Lc8UbYrAAAAALfronVPBc0soSjZUB52jBU1b8kU" data-callback='onSubmit' data-action='submit'
+    <button data-sitekey="6Lc8UbYrAAAAALfronVPBc0soSjZUB52jBU1b8kU" data-bs-toggle="modal" data-bs-target="#exampleModal" data-callback='onSubmit' data-action='submit'
       class="g-recaptcha btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
       Contactanos
     </button>
   </div>
 
 </div>
-              
+
           </form>
           <small id="newsletter-msg" class="text-light d-block mt-3" aria-live="polite"></small>
         </div>
@@ -827,6 +827,22 @@
   <!-- Back to Top -->
   <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+  <!-- modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Gracias por contactarnos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Muy pronto nos comunicaremos contigo.
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Captcha -->
   <script>
     function onSubmit(token) {
