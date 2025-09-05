@@ -37,6 +37,60 @@
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/custom.css" rel="stylesheet" />
+  <style>
+    /* CSS for partner logo section */
+.partner-logo-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.partner-logo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.partner-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Distribute logos evenly */
+  align-items: center; /* Align logos vertically in the center */
+}
+
+.partner-logo-cell {
+  width: 20%; /* Adjust as needed for the number of logos per row */
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in the width */
+  display: flex;
+  justify-content: center; /* Center logo horizontally */
+  align-items: center; /* Center logo vertically */
+}
+
+.partner-logo-cell-inner {
+  max-width: 100%; /* Ensure inner div doesn't exceed cell width */
+  max-height: 100%; /* Ensure inner div doesn't exceed cell height */
+  display: flex;
+  justify-content: center; /* Center logo horizontally */
+  align-items: center; /* Center logo vertically */
+}
+
+.partner-logo {
+  height: 100px; /* Adjust this value to your desired height */
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .partner-logo-cell {
+    width: 50%; /* Two logos per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-logo-cell {
+    width: 100%; /* One logo per row on even smaller screens */
+  }
+}
+  </style>
 </head>
 
 <body>
@@ -590,6 +644,41 @@
     </div>
      Quote End -->
 
+<section class="partner-logo-section container-fluid bg-light overflow-hidden my-5 px-lg-0" id="sec-4030">
+  <div class="container about px-lg-0">
+    <h2>Nuestros Partners</h2>
+    <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+    <div class="partner-logo-container">
+      <div class="partner-logo-row">
+        <div class="partner-logo-cell">
+          <div class="partner-logo-cell-inner">
+            <img src="https://chalkotex.cl/wp-content/uploads/2021/12/LOGO-MIN.-DE-CULTURA-300x297.png" alt="" class="partner-logo">
+          </div>
+        </div>
+        <div class="partner-logo-cell">
+          <div class="partner-logo-cell-inner">
+            <img src="https://chalkotex.cl/wp-content/uploads/elementor/thumbs/LOGO-FIA-ph695d626deindf588hnw3kfixqd8mfw018jmx9bo0.png" alt="" class="partner-logo">
+          </div>
+        </div>
+        <div class="partner-logo-cell">
+          <div class="partner-logo-cell-inner">
+            <img src="https://chalkotex.cl/wp-content/uploads/2021/12/LOGO-SERCOTEC-1024x587.png" alt="" class="partner-logo">
+          </div>
+        </div>
+        <div class="partner-logo-cell">
+          <div class="partner-logo-cell-inner">
+            <img src="https://chalkotex.cl/wp-content/uploads/2021/12/LOGO-CORFO-1024x638.png" alt="" class="partner-logo">
+          </div>
+        </div>
+        <div class="partner-logo-cell">
+          <div class="partner-logo-cell-inner">
+            <img src="https://chalkotex.cl/wp-content/uploads/2021/12/LOGO-GOB.-DE-CHILE-1024x726.png" alt="" class="partner-logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
   <!-- Team Start -->
   <!-- <div class="container-xxl py-5">
         <div class="container">
