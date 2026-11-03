@@ -133,3 +133,122 @@
     /* One logo per row on even smaller screens */
   }
 }
+
+.impact-page {
+  background: #f7f7f5;
+  color: #1d1d1d;
+}
+
+.impact-hero {
+  background: linear-gradient(180deg, #f3f0ea 0%, #f7f7f5 100%);
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.impact-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(214, 182, 97, 0.14);
+  color: #7f6932;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.impact-hero h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.1;
+  color: #1d1d1d;
+  font-weight: 800;
+}
+
+.impact-intro {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #4d4d4d;
+}
+
+.impact-content {
+  padding: 36px 0 80px;
+}
+
+.impact-section-header {
+  margin-bottom: 28px;
+}
+
+.impact-section-header h2 {
+  color: #1d1d1d;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 800;
+}
+
+.impact-accordion {
+  max-width: 1040px;
+  margin: 0 auto;
+  border: none;
+}
+
+.impact-accordion .accordion-item {
+  margin-bottom: 18px;
+  border: 1px solid rgba(24, 24, 24, 0.08);
+  border-radius: 18px !important;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.impact-accordion .accordion-button {
+  padding: 22px 28px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1d1d1d;
+  background: #fff;
+  border: 0;
+  box-shadow: none;
+}
+
+.impact-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+.impact-accordion .accordion-button:not(.collapsed) {
+  color: #1d1d1d;
+  background: #fbf7f0;
+  box-shadow: none;
+}
+
+.impact-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23252525'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.impact-accordion .accordion-body {
+  padding: 0 28px 28px;
+  color: #4d4d4d;
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+.impact-accordion .accordion-body p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .impact-hero {
+    padding-top: 42px;
+  }
+
+  .impact-accordion .accordion-button {
+    font-size: 1rem;
+    padding: 18px 18px;
+  }
+
+  .impact-accordion .accordion-body {
+    padding: 0 18px 20px;
+  }
+}
