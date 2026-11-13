@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descarga de KALA - Cuidados y uso</title>
+</head>
+<body>
+  <p>La descarga del PDF debería comenzar automáticamente. Si no comienza, <a id="pdf-download" href="KALA%20-%20Cuidados%20y%20uso.pdf" download="KALA - Cuidados y uso.pdf">descárgalo aquí</a>.</p>
+
+  <script>
+    function downloadPdf() {
+      document.getElementById("pdf-download").click();
+    }
+
+    window.addEventListener("load", downloadPdf, { once: true });
+  </script>
+</body>
+</html>
