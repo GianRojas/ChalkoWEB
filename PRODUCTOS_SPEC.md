@@ -33,7 +33,7 @@ ChalkoWEB/
 
 ## 3. Estructura de Navegación
 - Agregar enlace **"Productos"** en el **navbar** (entre "Proyectos" e "Impacto")
-- URL: `/productos/`
+- URL: `/productos/` 
 - Breadcrumbs en `productos/index.html`: `Inicio > Productos`
 - Breadcrumbs en `productos/<id>/index.html`: `Inicio > Productos > Nombre Producto`
 
