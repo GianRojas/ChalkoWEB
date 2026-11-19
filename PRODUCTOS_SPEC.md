@@ -33,13 +33,13 @@ ChalkoWEB/
 
 ## 3. Estructura de Navegación
 - Agregar enlace **"Productos"** en el **navbar** (entre "Proyectos" e "Impacto")
-- URL: `/productos/index.html`
+- URL: `/productos/`
 - Breadcrumbs en `productos/index.html`: `Inicio > Productos`
 - Breadcrumbs en `productos/<id>/index.html`: `Inicio > Productos > Nombre Producto`
 
 ---
 
-## 3. Modelo de Datos del Producto
+## 4. Modelo de Datos del Producto
 
 Cada producto tiene:
 | Campo | Tipo | Requerido | Descripción |
@@ -75,7 +75,7 @@ Cada producto tiene:
 
 ---
 
-## 5. Layout del Grid
+## 6. Layout del Grid
 
 ### Desktop (≥992px)
 - **3 columnas** iguales (`col-lg-4`)
@@ -110,7 +110,7 @@ Cada producto tiene:
 ```
 
 ### Botón "Ver detalle"
-- **Href**: `/productos/<id>/index.html` (ej: `/productos/kala-lamina-natural/index.html`)
+- **Href**: `/productos/<id>/` (ej: `/productos/kala-lamina-natural/`)
 - Estilo: `btn btn-outline-primary rounded-pill px-4`
 - Texto: "Ver detalle" + ícono `fa fa-arrow-right ms-1`
 
@@ -139,7 +139,7 @@ Cada producto tiene:
       <div class="col-lg-8">
         <nav aria-label="breadcrumb" class="mb-4">
           <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="/">Inicio</a></li>
             <li class="breadcrumb-item active" aria-current="page">Productos</li>
           </ol>
         </nav>
@@ -159,7 +159,7 @@ Cada producto tiene:
 
 ---
 
-## 8. Filtros por Categoría (Opcional v1.1)
+## 9. Filtros por Categoría (Opcional v1.1)
 
 Sobre el grid, barra de filtros:
 ```
@@ -170,18 +170,18 @@ Sobre el grid, barra de filtros:
 
 ---
 
-## 9. Integración con Navbar
+## 10. Integración con Navbar
 
 En `index.html` (línea ~102), agregar:
 ```html
-<a href="productos/index.html" class="nav-item nav-link">Productos</a>
+<a href="/productos/" class="nav-item nav-link">Productos</a>
 ```
 
 Y en `productos/index.html`, marcar como `active`.
 
 ---
 
-## 10. Archivos a Crear/Modificar
+## 11. Archivos a Crear/Modificar
 
 ### Nuevos (estructura completa)
 | Archivo | Descripción |
@@ -200,12 +200,12 @@ Y en `productos/index.html`, marcar como `active`.
 ### Modificar
 | Archivo | Cambio |
 |---------|--------|
-| `index.html` (raíz) | Agregar link "Productos" en navbar con `href="productos/index.html"` |
+| `index.html` (raíz) | Agregar link "Productos" en navbar con `href="/productos/"` |
 | `css/custom.css` | Importar `@import "products.css";` (si archivo separado) |
 
 ---
 
-## 11. Stack Técnico
+## 12. Stack Técnico
 - **HTML5** semántico
 - **Bootstrap 5** (ya en proyecto) para grid y utilidades
 - **CSS Custom Properties** (variables existentes: `--primary`, `--secondary`, `--light`, `--dark`)
@@ -216,7 +216,7 @@ Y en `productos/index.html`, marcar como `active`.
 
 ---
 
-## 12. Accesibilidad
+## 13. Accesibilidad
 - `alt` descriptivo en imágenes
 - Contraste AA mínimo
 - Focus visible en botones/links
@@ -225,16 +225,16 @@ Y en `productos/index.html`, marcar como `active`.
 
 ---
 
-## 13. SEO
-- `<title>Productos KALA - ChalkoTEX</title>`
-- Meta description única
+## 14. SEO
+- `<title>Productos KALA - ChalkoTEX</title>` en `productos/index.html`
+- Meta description única por página
 - Open Graph tags
 - JSON-LD `Product` schema para cada card
-- Sitemap.xml actualizado
+- Sitemap.xml actualizado con todas las URLs `/productos/<id>/`
 
 ---
 
-## 14. Performance
+## 15. Performance
 - Lazy loading nativo (`loading="lazy"`) en imágenes del grid
 - Imágenes optimizadas (WebP + fallback)
 - CSS/JS minificados en build
@@ -242,7 +242,7 @@ Y en `productos/index.html`, marcar como `active`.
 
 ---
 
-## 15. Próximos Pasos (Fuera de alcance v1.0)
+## 16. Próximos Pasos (Fuera de alcance v1.0)
 - Página de detalle individual (`producto.html?id=...`)
 - Carrito / cotización integrada
 - Filtros por tags, precio, disponibilidad
@@ -252,14 +252,17 @@ Y en `productos/index.html`, marcar como `active`.
 
 ---
 
-## 16. Criterios de Aceptación
-1. ✅ Página carga en `/productos/index.html`
-2. ✅ 7 productos visibles en grid 3/2/1 columnas
-3. ✅ Cards tienen hover effect y badge si corresponde
-4. ✅ Navbar destaca "Productos" como activo
-5. ✅ Responsive correcto en breakpoints Bootstrap
-6. ✅ Lightbox funciona al click en imagen
-7. ✅ Filtros Isotope funcionan (si se implementan v1.0)
-8. ✅ Sin errores de consola
-9. ✅ Lighthouse Performance ≥ 90
-10. ✅ Validación HTML (W3C) sin errores
+## 17. Criterios de Aceptación
+1. ✅ Estructura de carpetas `productos/` creada con 8 `index.html` (1 principal + 7 producto)
+2. ✅ Página principal carga en `/productos/`
+3. ✅ 7 productos visibles en grid 3/2/1 columnas
+4. ✅ Cards tienen hover effect y badge según campo `destacado`
+5. ✅ Botón "Ver detalle" navega a `/productos/<id>/`
+6. ✅ Navbar destaca "Productos" como activo en `/productos/`
+7. ✅ Breadcrumbs funcionan en ambas páginas (usando `/` y `/productos/`)
+8. ✅ Responsive correcto en breakpoints Bootstrap
+9. ✅ Lightbox funciona al click en imagen (prepara para galería futura)
+10. ✅ Filtros Isotope funcionan (si se implementan v1.0)
+11. ✅ Sin errores de consola
+12. ✅ Lighthouse Performance ≥ 90
+13. ✅ Validación HTML (W3C) sin errores
